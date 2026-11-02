@@ -212,13 +212,13 @@ private fun ChatRow(c: Chat, index: Int, showBadge: Boolean) {
     Row(
         Modifier
             .fillMaxWidth()
-            .heightIn(min = 76.dp)
+            .heightIn(min = 72.dp)
             .background(if (c.pinned) p.bar else Color.Transparent)
             .clickable { }
-            .padding(horizontal = 16.dp, vertical = 10.dp),
+            .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalAlignment = Alignment.Top
     ) {
-        Box(Modifier.size(60.dp)) {
+        Box(Modifier.size(56.dp)) {
             Box(
                 Modifier
                     .fillMaxSize()
@@ -229,7 +229,7 @@ private fun ChatRow(c: Chat, index: Int, showBadge: Boolean) {
                 Text(
                     text = c.name.first().toString(),
                     color = avFg,
-                    fontSize = 22.sp,
+                    fontSize = 20.sp,
                     fontWeight = FontWeight.Medium
                 )
             }
@@ -251,8 +251,8 @@ private fun ChatRow(c: Chat, index: Int, showBadge: Boolean) {
             Text(
                 text = c.name,
                 color = p.txt,
-                fontSize = 16.sp,
-                lineHeight = 20.sp,
+                fontSize = 15.sp,
+                lineHeight = 19.sp,
                 fontWeight = FontWeight.Medium,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
@@ -266,8 +266,8 @@ private fun ChatRow(c: Chat, index: Int, showBadge: Boolean) {
                 },
                 modifier = Modifier.padding(top = 1.dp),
                 color = p.sub,
-                fontSize = 14.5.sp,
-                lineHeight = 18.sp,
+                fontSize = 13.5.sp,
+                lineHeight = 17.sp,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -350,7 +350,7 @@ private fun NavBar(selected: Int, onSelect: (Int) -> Unit) {
                     text = tabTitles[i],
                     color = color,
                     fontSize = 13.sp,
-                    lineHeight = 18.sp,
+                    lineHeight = 17.sp,
                     fontWeight = FontWeight.Medium
                 )
             }
